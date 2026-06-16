@@ -1,0 +1,11 @@
+<nav>
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="nav-name">{{ site.title }}</a>
+    <ul class="nav-links">
+      <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+      <li><a href="{{ '/projects/' | relative_url }}" class="{% if page.url == '/projects/' %}active{% endif %}">Projects</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url contains '/blog/' %}active{% endif %}">Blog</a></li>
+      <li><a href="{{ '/reading/' | relative_url }}" class="{% if page.url == '/reading/' %}active{% endif %}">Reading</a></li>
+    </ul>
+  </div>
+</nav>
