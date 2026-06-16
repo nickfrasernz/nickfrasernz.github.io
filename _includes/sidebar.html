@@ -3,10 +3,7 @@
   <img class="sidebar-photo" src="{{ site.profile.photo | relative_url }}" alt="{{ site.title }}">
   {% endif %}
 
-  <div class="sidebar-name">{{ site.title }}</div>
-
   {% if site.profile.role %}<div class="sidebar-role">{{ site.profile.role }}</div>{% endif %}
-  {% if site.profile.location %}<div class="sidebar-location">{{ site.profile.location }}</div>{% endif %}
 
   <ul class="sidebar-links">
     {% if site.profile.email and site.profile.email != "" %}
