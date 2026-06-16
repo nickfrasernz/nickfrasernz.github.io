@@ -2,7 +2,7 @@ title: Nick Fraser
 description: "Personal projects, places, science stories, and things I'm learning."
 
 # Update this once your site is live (e.g. https://yourusername.github.io)
-url: "https://nickfrasernz.github.io"
+url: "https://YOUR-USERNAME.github.io"
 baseurl: ""
 
 markdown: kramdown
@@ -35,3 +35,15 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+
+# Sidebar profile — edit these directly to update your photo, role, or links.
+# Leave any link blank ("") to hide that icon from the sidebar.
+profile:
+  photo: /assets/images/profile.jpg
+  role: "Investment Manager, Science System Investment and Performance, MBIE"
+  location: "Wellington, New Zealand"
+  email: "mailto:turnoffraze@gmail.com"
+  linkedin: "https://www.linkedin.com/in/nickjfraser/"
+  github: "https://github.com/nickfrasernz"
+  scholar: "https://scholar.google.com/citations?user=dR9uRpQAAAAJ&hl=en"
+  orcid: "https://orcid.org/0000-0002-7326-0570"
