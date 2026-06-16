@@ -39,7 +39,7 @@ exclude:
 # Sidebar profile — edit these directly to update your photo, role, or links.
 # Leave any link blank ("") to hide that icon from the sidebar.
 profile:
-  photo: /assets/images/profile.jpg
+  photo: /assets/images/IMG_1161.jpg
   role: "Investment Manager, Science System Investment and Performance, MBIE"
   location: "Wellington, New Zealand"
   email: "mailto:turnoffraze@gmail.com"
