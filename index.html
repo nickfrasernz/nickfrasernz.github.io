@@ -15,43 +15,5 @@ intro2: |
     {{ page.intro | markdownify }}
     {{ page.intro2 | markdownify }}
     <p class="disclaimer">Everything here is personal, exploratory, and written in my own time. It does not represent my employer or any organisation I am connected with.</p>
-    <a class="btn" href="{{ '/projects/' | relative_url }}">View projects →</a>
   </div>
 </div>
-
-{% assign recent_posts = site.posts | slice: 0, 3 %}
-{% if recent_posts.size > 0 %}
-<div class="section">
-  <div class="section-label">Latest writing</div>
-  <div class="post-list">
-    {% for post in recent_posts %}
-    <a class="post-row" href="{{ post.url | relative_url }}">
-      <div>
-        <div class="post-title">{{ post.title }}</div>
-        {% if post.excerpt %}<div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</div>{% endif %}
-      </div>
-      <span class="post-date">{{ post.date | date: "%-d %b %Y" }}</span>
-    </a>
-    {% endfor %}
-  </div>
-  <a class="btn" href="{{ '/blog/' | relative_url }}">All posts →</a>
-</div>
-{% endif %}
-
-{% assign sorted_projects = site.projects | sort: 'order' %}
-{% if sorted_projects.size > 0 %}
-<div class="section">
-  <div class="section-label">Currently</div>
-  <div class="project-list">
-    {% for project in sorted_projects %}
-    <a class="project-row" href="{% if project.link %}{{ project.link }}{% else %}{{ '/projects/' | relative_url }}{% endif %}">
-      <div>
-        <div class="project-title">{{ project.title }}</div>
-        <div class="project-desc">{{ project.description }}</div>
-      </div>
-      <span class="project-status">{{ project.status }}</span>
-    </a>
-    {% endfor %}
-  </div>
-</div>
-{% endif %}
