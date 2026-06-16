@@ -21,11 +21,10 @@ intro: "A running list of things I'm working on, thinking about, or exploring."
       <div class="project-title">{{ project.title }}</div>
       <div class="project-desc">{{ project.description }}</div>
     </div>
-    <span class="project-status">{{ project.status }}</span>
   {% if project.link %}</a>{% else %}</div>{% endif %}
   {% endfor %}
 </div>
 
 {% if sorted_projects.size == 0 %}
-<p class="empty-note">No projects yet — add one through the CMS and it will appear here.</p>
+<p class="empty-note">No projects yet.</p>
 {% endif %}
