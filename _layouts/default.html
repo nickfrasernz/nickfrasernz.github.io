@@ -11,8 +11,11 @@
 </head>
 <body>
 {% include nav.html %}
-<div class="page">
+<div class="page-with-sidebar">
+  {% include sidebar.html %}
+  <div class="page">
 {{ content }}
+  </div>
 </div>
 {% include footer.html %}
 </body>
