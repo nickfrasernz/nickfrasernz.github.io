@@ -2,26 +2,78 @@
 layout: default
 title: Study
 permalink: /reading/
-intro: "Books, papers, and audiobooks I'm reading or have recently finished."
+intro: "Courses, papers, books, and other things I'm working through."
 ---
 <div class="page-header">
   <h1>{{ page.title }}</h1>
   {% if page.intro %}<p class="page-intro">{{ page.intro }}</p>{% endif %}
 </div>
 
-<div class="reading-list">
-  {% for item in site.reading %}
-  <div class="reading-row">
-    <div>
-      <div class="reading-title">{{ item.title }}</div>
-      {% if item.author %}<div class="reading-author">{{ item.author }}</div>{% endif %}
-      {% if item.content and item.content != "" %}<div class="reading-notes">{{ item.content | markdownify }}</div>{% endif %}
+{% assign courses = site.reading | where: "type", "course" %}
+{% assign papers = site.reading | where: "type", "paper" %}
+{% assign books = site.reading | where: "type", "book" %}
+{% assign other = site.reading | where: "type", "other" %}
+
+{% if courses.size > 0 %}
+<div class="learn-section">
+  <div class="learn-label">Courses</div>
+  <div class="learn-list">
+    {% for item in courses %}
+    <div class="learn-row">
+      <span class="learn-title">{{ item.title }}</span>{% if item.author %}<span class="learn-author"> — {{ item.author }}</span>{% endif %}
+      <span class="learn-status">{{ item.status }}</span>
+      {% if item.content and item.content != "" %}<div class="learn-notes">{{ item.content | markdownify }}</div>{% endif %}
     </div>
-    <span class="reading-status">{{ item.status }}</span>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
+{% endif %}
+
+{% if papers.size > 0 %}
+<div class="learn-section">
+  <div class="learn-label">Papers</div>
+  <div class="learn-list">
+    {% for item in papers %}
+    <div class="learn-row">
+      <span class="learn-title">{{ item.title }}</span>{% if item.author %}<span class="learn-author"> — {{ item.author }}</span>{% endif %}
+      <span class="learn-status">{{ item.status }}</span>
+      {% if item.content and item.content != "" %}<div class="learn-notes">{{ item.content | markdownify }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if books.size > 0 %}
+<div class="learn-section">
+  <div class="learn-label">Books</div>
+  <div class="learn-list">
+    {% for item in books %}
+    <div class="learn-row">
+      <span class="learn-title">{{ item.title }}</span>{% if item.author %}<span class="learn-author"> — {{ item.author }}</span>{% endif %}
+      <span class="learn-status">{{ item.status }}</span>
+      {% if item.content and item.content != "" %}<div class="learn-notes">{{ item.content | markdownify }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if other.size > 0 %}
+<div class="learn-section">
+  <div class="learn-label">Other</div>
+  <div class="learn-list">
+    {% for item in other %}
+    <div class="learn-row">
+      <span class="learn-title">{{ item.title }}</span>{% if item.author %}<span class="learn-author"> — {{ item.author }}</span>{% endif %}
+      <span class="learn-status">{{ item.status }}</span>
+      {% if item.content and item.content != "" %}<div class="learn-notes">{{ item.content | markdownify }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
 
 {% if site.reading.size == 0 %}
-<p class="empty-note">Nothing here yet — add a book or article through the CMS and it will appear here.</p>
+<p class="empty-note">Nothing here yet.</p>
 {% endif %}
