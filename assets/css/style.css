@@ -353,6 +353,64 @@ nav {
   font-style: italic;
 }
 
+/* STUDY PAGE */
+.learn-section {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.learn-section:last-of-type {
+  border-bottom: none;
+}
+
+.learn-section:first-of-type {
+  padding-top: 3rem;
+}
+
+.learn-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1.1rem;
+}
+
+.learn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.learn-row {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.learn-title {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.learn-author {
+  color: var(--muted);
+}
+
+.learn-status {
+  display: block;
+  font-size: 11px;
+  color: var(--faint);
+  font-style: italic;
+  margin-top: 0.15rem;
+}
+
+.learn-notes {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 0.35rem;
+}
+
 /* SINGLE BLOG POST */
 .post-header {
   padding: 3.5rem 0 1.5rem;
