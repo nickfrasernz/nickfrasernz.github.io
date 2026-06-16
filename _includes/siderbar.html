@@ -1,0 +1,28 @@
+<div class="sidebar">
+  {% if site.profile.photo %}
+  <img class="sidebar-photo" src="{{ site.profile.photo | relative_url }}" alt="{{ site.title }}">
+  {% endif %}
+
+  <div class="sidebar-name">{{ site.title }}</div>
+
+  {% if site.profile.role %}<div class="sidebar-role">{{ site.profile.role }}</div>{% endif %}
+  {% if site.profile.location %}<div class="sidebar-location">{{ site.profile.location }}</div>{% endif %}
+
+  <ul class="sidebar-links">
+    {% if site.profile.email and site.profile.email != "" %}
+    <li><a href="{{ site.profile.email }}">Email</a></li>
+    {% endif %}
+    {% if site.profile.linkedin and site.profile.linkedin != "" %}
+    <li><a href="{{ site.profile.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+    {% endif %}
+    {% if site.profile.github and site.profile.github != "" %}
+    <li><a href="{{ site.profile.github }}" target="_blank" rel="noopener">GitHub</a></li>
+    {% endif %}
+    {% if site.profile.scholar and site.profile.scholar != "" %}
+    <li><a href="{{ site.profile.scholar }}" target="_blank" rel="noopener">Google Scholar</a></li>
+    {% endif %}
+    {% if site.profile.orcid and site.profile.orcid != "" %}
+    <li><a href="{{ site.profile.orcid }}" target="_blank" rel="noopener">ORCID</a></li>
+    {% endif %}
+  </ul>
+</div>
