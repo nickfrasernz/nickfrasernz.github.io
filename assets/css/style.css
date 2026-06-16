@@ -105,7 +105,7 @@ nav {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 30%;
   margin-bottom: 1rem;
   display: block;
 }
